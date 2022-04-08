@@ -13,45 +13,49 @@
 <body>
 
 	<div class="container">
-		<h2>Basic Table</h2>
-		<p>The .table class adds basic styling (light padding and only horizontal dividers) to a table:</p>
-		<table class="table">
-			<thead>
-				<tr>
-					<th>Coin</th>
-					<th>Current Price</th>
-					<th>Invested Price</th>
-					<th>Profit</th>
-				</tr>
-			</thead>
-			<tbody>
-				{%for i in coins[0]%}
+		<h2>Crypto Portfolio</h2>
+		<div class="table-responsive">
+			<table class="table">
+				<thead>
 					<tr>
-					{%for x in i%}
-						<td>{{x}}</td>
-					{%endfor%}
+						<th>Coin</th>
+						<th>Current Price</th>
+						<th>Invested Price</th>
+						<th>Profit</th>
 					</tr>
-				{%endfor%}
-			</tbody>
-		</table>
-		<table class="table">
-			<thead>
-				<tr>
-					<th>Portfolio Value</th>
-					<th>Total Invested Value</th>
-					<th>Total Profit</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					{%for x in coins[1]%}
-						<td>{{x}}</td>
+				</thead>
+				<tbody>
+					{%for i in coins[0]%}
+						<tr>
+						{%for x in i%}
+							<td>{{x}}</td>
+						{%endfor%}
+						</tr>
 					{%endfor%}
-				</tr>
-			</tbody>
-			
+				</tbody>
+			</table>
+		</div>
+		<div class="table-responsive">
 
-		</table>
+			<table class="table">
+				<thead>
+					<tr>
+						<th>Portfolio Value</th>
+						<th>Total Invested Value</th>
+						<th>Total Profit</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						{%for x in coins[1]%}
+							<td>{{x}}</td>
+						{%endfor%}
+					</tr>
+				</tbody>
+				
+
+			</table>
+		</div>
 	</div>
 
 </body>
